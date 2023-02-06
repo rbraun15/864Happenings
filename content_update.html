@@ -90,11 +90,7 @@ body {font-family: Arial, Helvetica, sans-serif !important;
     
         <p>   
        <label for="add_description">Description</label>   
-
-
-      <textarea rows="5"  name="add_description" placeholder="Description"></textarea>
-
-
+      <textarea rows="5"  id="add_description" name="add_description" placeholder="Description"></textarea>
            </p>
 
             <p>   
@@ -125,6 +121,7 @@ today = mm + '/' + dd + '/' + yyyy ;
     const add_lname = document.querySelector('#add_lname');
     const add_email = document.querySelector('#add_email');  
     const add_phone = document.querySelector('#add_phone');  
+    const add_description = document.querySelector('#add_description');  
     const add_url = document.querySelector('#add_url');  
  
     //Add listener
@@ -140,6 +137,7 @@ today = mm + '/' + dd + '/' + yyyy ;
      lname: add_lname.value,
      phone: add_phone.value,
      email: add_email.value,
+     description: add_description.value,
      name: add_fname.value + ' ' + add_lname.value
 });
         }
