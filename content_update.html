@@ -125,20 +125,25 @@ today = mm + '/' + dd + '/' + yyyy ;
     const add_url = document.querySelector('#add_url');  
  
     //Add listener
-     form_content.addEventListener('submit',addRegistration);
+     form_content.addEventListener('submit',addContentUpdate);
     
     
      
-     function addRegistration() {  
-       // add identify call
-   analytics.identify(add_email.value, {
+     function addContentUpdate() {  
+       // add track call
+   analytics.track("ContentUpdate", {
      content_type: content_type.value,
      fname: add_fname.value,
      lname: add_lname.value,
      phone: add_phone.value,
      email: add_email.value,
-     description: add_description.value,
+     description: add_description.value
+"context": {
+"traits" : {
      name: add_fname.value + ' ' + add_lname.value
+     email: add_email.value
+}
+}
 });
         }
      </script>
