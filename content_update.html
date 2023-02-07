@@ -136,7 +136,12 @@ today = mm + '/' + dd + '/' + yyyy ;
      fname: add_fname.value,
      lname: add_lname.value,
      phone: add_phone.value,
-     description: add_description.value
+     description: add_description.value,
+  "context": {
+    "traits" : {
+      "email": add_email.value
+    }
+  } 
 });
         }
      </script>
