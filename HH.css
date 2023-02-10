@@ -146,7 +146,7 @@ line-height: 2.0em;
 form  { display: table;      }
 p     { display: table-row;  }
 label { display: table-cell; width: 150px; padding: 5px 10px 5px 10px; text-align: right; vertical-align: top; }
-input, select, textarea { display: table-cell; width: 250px; 
+input, select, textarea { display: table-cell; width: 100%; 
 -moz-box-sizing: border-box;
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
