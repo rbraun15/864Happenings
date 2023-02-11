@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../css/HH.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics._writeKey="0cpgh5fnMI1IouTOkvype5b53vxViFeN";;analytics.SNIPPET_VERSION="4.15.3";
+  analytics.load("0cpgh5fnMI1IouTOkvype5b53vxViFeN");
+  analytics.page();
+  }}();
+</script>
+    
+    <style type="text/css">
+        img {
+  float: right;
+}
+        
+body {font-family: Arial, Helvetica, sans-serif !important;
+     }
+</style>
+    <title>The 864 Hub
+  </title>
+</head>
+<body>
+
+<div class="navbar">
+  <a class="active" href="index.html">Home</a>
+  <a href="events.html">Events</a>
+  <a href="grocery_deals.html">Grocery/Beer</a>
+  <div class="dropdown">
+    <button class="dropbtn">HH
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="Monday_daily_deals.html">Monday</a>
+      <a href="Tuesday_daily_deals.html">Tuesday</a>
+      <a href="Wednesday_daily_deals.html">Wednesday</a>
+      <a href="Thursday_daily_deals.html">Thursday</a>
+      <a href="Friday_daily_deals.html">Friday</a>
+      <a href="Saturday_daily_deals.html">Saturday</a>
+      <a href="Sunday_daily_deals.html">Sunday</a>
+      <a href="daily_deals_all_days.html">All Days</a>
+  </div>
+  </div>
+     <div class="topnav-right">
+    <a href="registration.html">Sign-up</a>
+  </div>
+  </div>
+    
+  </div> 
+ 
+    
+    
+           <br>
+           <br>
+<div class="forms">
+<h3>Set your email preference</h3>  
+   <form id="registration-form">
+           <p>
+
+
+       <label for="reg_fname">First Name</label>
+       <input type="text" id="reg_fname" name="reg_firstname" placeholder="First">
+           </p>
+           <p>
+       <label for="reg_flname">Last Name</label>   
+       <input type="text" id="reg_lname" name="reg_lastname" placeholder="Last">
+           </p>
+            <p>   
+       <label for="reg_email">Email</label>   
+       <input type="text" id="reg_email" name="reg_email" placeholder="Email">
+           </p>
+
+            <p>   
+       <label for="reg_email">Phone</label>   
+       <input type="text" id="reg_phone" name="reg_phone" placeholder="Phone">
+           </p>
+
+            <p>   
+       <label for="reg_email">User Id</label>   
+       <input type="text" id="reg_user_id" name="reg_user_id" placeholder="user_id">
+           </p>
+
+    <p>
+ <label for="email_preference">Email Pref</label>
+   <select id="reg_email_pref" name=reg_email_pref">
+     <option value=""></option>
+     <option value="weekly_email"">Weekly Email</option>
+     <option value="monthly_email"">Monthly Email</option>
+     <option value="no_email"">No Email</option>
+   </select>
+     </p>
+           <br>
+           <p>
+       <label for=""></label>   
+       <input type="submit" class="btn" value="Submit">
+           </p>
+     </form>
+</div>
+
+<script>  
+// Get Current Date      
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0');
+var yyyy = String(today.getFullYear());
+today = mm + '/' + dd + '/' + yyyy ;
+
+    //Define UI variables
+    const form_reg = document.querySelector('#registration-form');
+    const reg_email_pref = document.querySelector('#reg_email_pref');
+    const reg_fname = document.querySelector('#reg_fname');
+    const reg_lname = document.querySelector('#reg_lname');
+    const reg_email = document.querySelector('#reg_email');  
+    const reg_phone = document.querySelector('#reg_phone');  
+    const reg_user_id = document.querySelector('#reg_user_id');  
+ 
+    //Add listener
+     form_reg.addEventListener('submit',addRegistration);
+    
+    
+     
+     function addRegistration() {  
+       // add identify call
+   analytics.identify(reg_email.value, {
+     email_pref: reg_email_pref.value,
+     fname: reg_fname.value,
+     lname: reg_lname.value,
+     phone: reg_phone.value,
+     email: reg_email.value,
+     name: reg_fname.value + ' ' + reg_lname.value
+});
+        }
+     </script>
+    
+<br>
+<font size=3>Click <A href=content_update.html>HERE</A> to suggest additions or updates.</font>
+
+
+</BODY>
+
+</HTML>
