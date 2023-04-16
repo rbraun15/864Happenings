@@ -120,11 +120,15 @@ line-height: 1.0em;
 
 .line_color2{
 background-color: #90EE90 ;
-line-height: 0.50em;
+line-height: 1.50em;
+ }
+
+.line_main {
+line-height: 1.0em;
  }
 
 .line_space1 {
-line-height: .50em;
+line-height: 1.50em;
  }
 
 .hello_box {
