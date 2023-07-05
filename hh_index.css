@@ -10,7 +10,10 @@ text: 000080 ;
 link: 0000FF ;
 alink: FF0000 ;
 vlink: 800080;
-
+      background-image: url('pangea.jpg');
+  /* background-repeat: no-repeat; */
+  /* background-attachment: fixed;  */
+ /*  background-size: cover; */
     
 }
 
@@ -45,13 +48,15 @@ img.middle {
 
 .titlebar {
   overflow: hidden;
-  background-color: GreenYellow;
+  /* background-color: GreenYellow; */
+    color: GreenYellow;
 }
 
 .titlebar a {
   float: left;
   font-size: 56px;
-  color: black;
+  /* color: black; */
+    color GreenYellow;
   text-align: center;
   padding: 14px 8px;
   text-decoration: none;
@@ -134,9 +139,10 @@ line-height: 1.00em;
  }
 
 .hello_box {
-  border: 3px solid black;
-  background-color: GreenYellow;
-  padding-top: 10px;
+  /*  border: 3px solid black; */
+  /* background-color: GreenYellow; */
+    color: GreenYellow;
+  padding-top: 30px;
   padding-right: 10px;
   padding-bottom: 10px;
   padding-left: 10px;
