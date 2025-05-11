@@ -5,12 +5,13 @@
 } 
  
 body {
-background-color: GreenYellow;
+#background-color: GreenYellow;
 text: 000080 ;
 link: 0000FF ;
 alink: FF0000 ;
 vlink: 800080;
-      background-image: url('weiss_bier.png');
+#      background-image: url('gvlhub_logo.png');
+ #     background-image: url('weiss_bier.png');
   /* background-repeat: no-repeat; */
   /* background-attachment: fixed;  */
  /*  background-size: cover; */
@@ -39,10 +40,6 @@ line-height: 1.0em;
   color: white;
 }
 
-img.middle {
-  vertical-align: middle;
-  float: right;
-}
 
     
 
@@ -173,6 +170,26 @@ line-height: 1.00em;
   }
 }
 
+img.logo {
+  float: none;         /* Cancel the float */
+  display: block;
+  margin: 0 auto;      /* Center it horizontally */
+}
+
+
+.logo {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.logo-container {
+    text-align: center;
+    padding: 100px 0;
+}
 
 
 
