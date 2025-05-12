@@ -78,8 +78,8 @@ img.middle {
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: #90EE90;
-  color: red;
+  background-color: white;
+  color: black;
 }
 
 .dropdown-content {
@@ -103,7 +103,8 @@ img.middle {
 }
 
 .dropdown-content a:hover {
-  background-color: #90EE90;
+ # background-color: #90EE90;
+  background-color: white;
 }
 
 .dropdown:hover .dropdown-content {
