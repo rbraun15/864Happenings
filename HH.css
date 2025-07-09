@@ -6,6 +6,7 @@
  
 body {
 #background-color: #3B5F38;
+
 text: 000080 ;
 link: 0000FF ;
 alink: FF0000 ;
@@ -119,7 +120,7 @@ img.middle {
 #background-color: #90EE90 ;
 background-color: #3B5F38 ;
 color: white;
-line-height: 1.0em;
+line-height: 1.25em;
  }
 
 .line_color a {
@@ -131,15 +132,15 @@ line-height: 1.0em;
 #background-color: #90EE90 ;
 background-color: #3B5F38 ;
 color: white;
-line-height: 1.00em;
+line-height: 1.25em;
  }
 
 .line_main {
-line-height: 1.0em;
+line-height: 1.25em;
  }
 
 .line_space1 {
-line-height: 1.00em;
+line-height: 1.25em;
  }
 
 .hello_box {
@@ -175,18 +176,155 @@ line-height: 1.00em;
 }
 
 
+form  {
+    display: block; /* Ensures the form acts as a block container */
+    /* Remove any old table-related properties if they are still here */
+}
+
+p {
+    display: block; /* Makes each form group (label + input) a block, putting them on new lines */
+    margin-bottom: 15px; /* Adds space between each input field group */
+    line-height: initial; /* Resets line-height to prevent unwanted spacing for new block elements */
+}
+
+label {
+    display: block; /* Makes the label appear above the input field */
+    margin-bottom: 5px; /* Adds a small space between the label and the input */
+    padding: 0; /* Remove any previous padding for table-cell layout */
+    text-align: left; /* Aligns the label text to the left */
+    vertical-align: initial; /* Resets vertical alignment */
+    font-weight: normal; /* Makes the label text bold */
+    color: white; /* Keeps the label text white, consistent with your green box */
+}
+
+/* General styling for all input/select/textarea elements */
+input, select, textarea {
+    display: block; /* Ensures they take up full width and stack */
+    width: 100%; /* Makes them take 100% width of their parent container */
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /* Default padding and border from green-box will override this if more specific */
+}
 
 
 
 
-form  { display: table;      }
-p     { display: table-row;  }
-label { display: table-cell; width: 150px; padding: 5px 10px 5px 10px; text-align: right; vertical-align: top; }
-input, select, textarea { display: table-cell; width: 100%; 
--moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-                                          }
+ ul.service-list {
+      list-style: none;
+      padding: 0;
+    }   
+    ul.service-list li {
+      position: relative;
+      margin-bottom: 1rem;
+      padding-left: 2.5rem;
+      line-height: 1.6;
+    }   
+    ul.service-list li::before {
+      content: '\2713'; /* checkmark */
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      # background-color: #0a6150;
+     background-color: #3B5F38; 
+      color: white;
+      border-radius: 50%;
+      width: 1.5rem;
+      height: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+border: 2px solid white;
+    }  
+
+
+.green-box {
+  background-color: #3B5F38; /* or #0a6150 for a slightly different green */
+  border: 2px solid #0a6150;
+  color: white;
+  padding: 20px ;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.green-box input,
+.green-box select,
+.green-box textarea {
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 12px;
+  margin-top: 0;
+}
+
+.green-box-wrapper {
+  max-width: 1000px;  /* or whatever width you want for consistency */
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.content-box, .forms {
+  width: 90%;
+  max-width: 500px;
+  box-sizing: border-box;
+}
+
+
+/* Fix layout for narrow/mobile view */
+.responsive-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+  margin-top: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  /* Removed align-items: center */
+}
+
+/* On narrow screens (mobile) */
+.responsive-sections .green-box {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* On wider screens (side-by-side layout) */
+@media (min-width: 768px) {
+  .responsive-sections {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .responsive-sections .green-box {
+    width: calc(50% - 10px);
+    margin: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
 
 
 </style>
