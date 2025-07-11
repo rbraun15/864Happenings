@@ -27,9 +27,13 @@
 }
         
 body {font-family: Arial, Helvetica, sans-serif !important;
+background-image: url('Gemini_Generated_Image_Swimming_pool.svg'); /* Replace 'pool_background.svg' with your actual filename */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
      }
 </style>
-<title>Greenville SC Happy Hours & Pizza Sat HH</title>
+<title>Greenville SC Happy Hours & Pizza Content Upd</title>
 </head>
 <body>
 
@@ -51,69 +55,76 @@ body {font-family: Arial, Helvetica, sans-serif !important;
   </div>
   </div>
   <a href="pizza.html">Pizza</a>
-  <a href="service_home.html">Service-Finder</a>
+  <a href="events.html">Service-Finder</a>
   </div>
     
   </div> 
     
     <!—ThisIsTheDivider - Above Is Common Template-->
  
-<font size=5><b><u>  Saturday </u></b></font>
-<p>
-<p>
-<div class=line_color2>
-&nbsp; 
+<div class="green-box-wrapper">
+<div class="green-box">
+  <h1>Greenville Service Finder</h1>
+  <p><b>Our mission is two fold:</b></p>
+  <p>1) Help homeowners connect with vetted, reliable service providers that do what they say they will do. </p>
+  <p>2) Help business owners grow their business via strategic use of data.</p>
 </div>
-<div class=line_color>
-<font size=3><A href=>ALoft</A> &nbsp;-&nbsp;  <A href=>$6 - drafts, wine, well liquor (every day 4-6PM)</A></font>
 </div>
-<div class=line_color2>
-&nbsp; 
-</div>
-<div class=line_space1>
-&nbsp; 
-</div>
-<div class=line_main>
-<font size=3><A href=https://www.yelp.com/biz/cantina-76-greenville?start=60>Cantina 76</A> &nbsp;-&nbsp;  <A href=>1/2 Price House Margarita until 7pm</A></font>
-</div>
-<div class=line_space1>
-&nbsp; 
-</div>
-<div class=line_color2>
-&nbsp; 
-</div>
-<div class=line_color>
-<font size=3><A href=>Coral</A> &nbsp;-&nbsp;  <A href=https://www.coralgreenville.com/menu/>$4 Stella Draft, $5 house liquor, $6 wine, $7 speciality Daily (4-6PM)</A></font>
-</div>
-<div class=line_color2>
-&nbsp; 
-</div>
-<div class=line_space1>
-&nbsp; 
-</div>
-<div class=line_main>
-<font size=3><A href=>Larkins</A> &nbsp;-&nbsp;  <A href=https://larkinsgvl.com/events/>$2 oysters, $5 house martinis, $3 drafts (3-6PM)</A></font>
-</div>
-<div class=line_space1>
-&nbsp; 
-</div>
-<div class=line_color2>
-&nbsp; 
-</div>
-<div class=line_color>
-<font size=3><A href=>Roost</A> &nbsp;-&nbsp;  <A href=>$5 - Drafts, Wine, Margarita (Mon-Sun 4-6pm)</A></font>
-</div>
-<div class=line_color2>
-&nbsp; 
-</div>
-<br>
-Deal links - LEFT = Yelp, RIGHT = deal details
-&nbsp; 
-<br>
-<br>
-<font size=3>Click <A href=content_update.html>HERE</A> to suggest additions or updates</font>
 
 
-</BODY>
+<div class="green-box-wrapper">
+  <div class="green-box">
+    <h2>Services</h2>
+    <ul class="service-list">
+      <li class="white-link-item"><A href=pool_request.html>Swimming Pool Services</A></li>
+      <li class="white-link-item"><A href=events.html>Misc</A></li>
+    </ul>
+  </div>
 
-</HTML>
+</div>
+
+
+
+
+<script>  
+// Get Current Date      
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0');
+var yyyy = String(today.getFullYear());
+today = mm + '/' + dd + '/' + yyyy ;
+
+    //Define UI variables
+    const form_content = document.querySelector('#pool-service-request');
+    const add_fname = document.querySelector('#add_fname');
+    const add_lname = document.querySelector('#add_lname');
+    const add_email = document.querySelector('#add_email');  
+    const add_phone = document.querySelector('#add_phone');  
+    const add_address = document.querySelector('#add_address');  
+    const add_description = document.querySelector('#add_description');  
+ 
+    //Add listener
+     form_content.addEventListener('submit',addContentUpdate);
+    
+    
+     
+     function addContentUpdate() {  
+       // add track call
+   analytics.track("PoolServiceRequest", {
+     fname: add_fname.value,
+     lname: add_lname.value,
+     phone: add_phone.value,
+     address: add_address.value,
+     description: add_description.value,
+  "context": {
+    "traits" : {
+      "email": add_email.value
+    }
+  } 
+});
+        }
+     </script>
+    
+
+</body>
+</html>

@@ -208,7 +208,10 @@ input, select, textarea {
 }
 
 
-
+.white-link-item a:hover,
+.white-link-item a:visited {
+    color: white;
+}
 
  ul.service-list {
       list-style: none;
