@@ -321,7 +321,9 @@ border: 2px solid white;
 }
 
 
-
+li {
+    margin-bottom: 10px; /* Adjust this value as needed, e.g., 5px, 0.5em, 15px */
+}
 
 
 
