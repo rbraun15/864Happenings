@@ -64,27 +64,69 @@ background-image: url('Gemini_Generated_Image_Swimming_pool.svg'); /* Replace 'p
  
 <div class="green-box-wrapper">
 <div class="green-box">
-  <h1>Greenville Service Finder</h1>
-  <p><b>Our mission is two fold:</b></p>
-  <p>1) Help homeowners connect with reputable business known for honesty, clear communicaiton, and consistent results.</p>
-  <p>2) Help business owners grow their business via strategic use of data.  Areas of focus include geolocation intelligence and customer spend analysis.</p>
+  <h1>Greenville Pool Cleaning Services</h1>
+  <p>Your trusted source for professional pool maintenance and cleaning in the Greenville area.</p>
 </div>
 </div>
 
 
 <div class="green-box-wrapper">
+<div class="responsive-sections">
   <div class="green-box">
-    <h2>Services</h2>
+    <h2>Our Services</h2>
     <ul class="service-list">
-      <li class="white-link-item"><A href=pool_request.html>Customer Spend Analysis</A></li>
-      <li class="white-link-item"><A href=pool_request.html>Geolocation Intelligence</A></li>
-      <li class="white-link-item"><A href=pool_request.html>Real Estate - Buy & Sell</A></li>
-      <li class="white-link-item"><A href=pool_request.html>Synthetic Turf</A></li>
-      <li class="white-link-item"><A href=pool_request.html>Swimming Pool Services</A></li>
-      <li class="white-link-item"><A href=events.html>Misc</A></li>
+      <li>Weekly or Bi-weekly Pool Cleaning</li>
+      <li>Filter Inspection & Maintenance</li>
+      <li>Water Testing & Chemical Balancing</li>
+      <li>Algae Treatment & Prevention</li>
+      <li>Pool Opening and Closing</li>
+      <li>Emergency Pool Clean-up</li>
     </ul>
   </div>
 
+  <div class="green-box">
+    <h2>Pool Service Request</h2>
+    <form id="pool-service-request">
+      <p>
+        <label for="add_fname">First Name</label>
+        <input type="text" id="add_fname" name="add_firstname" placeholder="First Name">
+      </p>
+      <p>
+        <label for="add_flname">Last Name</label>
+        <input type="text" id="add_lname" name="add_lastname" placeholder="Last Name">
+      </p>
+      <p>
+        <label for="add_email">Email</label>
+        <input type="text" id="add_email" name="add_email" placeholder="Email Address">
+      </p>
+      <p>
+        <label for="add_phone">Phone</label>
+        <input type="text" id="add_phone" name="add_phone" placeholder="Phone Number">
+      </p>
+      <p>
+        <label for="content_type">Type</label>
+        <select id="content_type" name="content_type">
+          <option value=""></option>
+          <option value="event">Event</option>
+          <option value="happy_hour">Happy Hour</option>
+          <option value="pizza">Pizza</option>
+        </select>
+      </p>
+      <p>
+        <label for="add_description">Description</label>
+        <textarea rows="5" id="add_description" name="add_description" placeholder="Service Description"></textarea>
+      </p>
+      <p>
+        <label for="add_url">Url</label>
+        <input type="text" id="add_url" name="add_url" placeholder="url">
+      </p>
+      <p>
+        <label></label>
+        <input type="submit" class="btn" value="Submit">
+      </p>
+    </form>
+  </div>
+</div>
 </div>
 
 
@@ -100,12 +142,13 @@ today = mm + '/' + dd + '/' + yyyy ;
 
     //Define UI variables
     const form_content = document.querySelector('#pool-service-request');
+    const content_type = document.querySelector('#content_type');
     const add_fname = document.querySelector('#add_fname');
     const add_lname = document.querySelector('#add_lname');
     const add_email = document.querySelector('#add_email');  
     const add_phone = document.querySelector('#add_phone');  
-    const add_address = document.querySelector('#add_address');  
     const add_description = document.querySelector('#add_description');  
+    const add_url = document.querySelector('#add_url');  
  
     //Add listener
      form_content.addEventListener('submit',addContentUpdate);
@@ -115,11 +158,12 @@ today = mm + '/' + dd + '/' + yyyy ;
      function addContentUpdate() {  
        // add track call
    analytics.track("PoolServiceRequest", {
+     content_type: content_type.value,
      fname: add_fname.value,
      lname: add_lname.value,
      phone: add_phone.value,
-     address: add_address.value,
      description: add_description.value,
+     url: add_url.value,
   "context": {
     "traits" : {
       "email": add_email.value
