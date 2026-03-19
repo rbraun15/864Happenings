@@ -206,7 +206,42 @@ input, select, textarea { display: table-cell; width: 100%;
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
                                           }
+/* --- Instagram Icon & Logo Alignment --- */
 
+#logo-wrapper {
+    position: relative;      /* This 'anchors' the icon to the logo */
+    width: fit-content;      /* Makes the box only as wide as the image */
+    margin: 30px auto;       /* Centers the entire logo on the page */
+    display: block;
+    background-image: none !important; /* Forces the 'ghost' logo to disappear */
+}
+
+.main-logo {
+    width: 500px;            /* Adjust this to change the logo size */
+    max-width: 90%;          /* Keeps it from breaking on mobile phones */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.insta-icon {
+    position: absolute;      /* Places the icon relative to the logo-wrapper */
+    top: -10px;              /* Moves it UP (decrease to -20 to go higher) */
+    right: -25px;             /* Moves it RIGHT (increase to -40 to go further out) */
+    z-index: 10;
+}
+
+.insta-icon img {
+    width: 35px;             /* Size of the Instagram icon */
+    height: 35px;
+    background-color: white; /* Optional: adds a white backing if the icon is transparent */
+    border-radius: 8px;      /* Slightly rounds the corners */
+    transition: transform 0.2s ease; /* Smooth animation for the hover effect */
+}
+
+.insta-icon:hover img {
+    transform: scale(1.15);  /* Makes the icon pop slightly when hovered */
+}
 
 </style>
  
