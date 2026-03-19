@@ -206,42 +206,46 @@ input, select, textarea { display: table-cell; width: 100%;
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
                                           }
-/* --- Instagram Icon & Logo Alignment --- */
+/* --- Instagram Icon & Logo Alignment - Corrected for Mobile --- */
 
 #logo-wrapper {
-    position: relative;      /* This 'anchors' the icon to the logo */
-    width: fit-content;      /* Makes the box only as wide as the image */
-    margin: 30px auto;       /* Centers the entire logo on the page */
+    position: relative;      /* Keeps the icon relative to this container */
+    width: fit-content;      /* Wrapper is only as wide as the content (logo + icon) */
+    margin: 30px auto;       /* Centers the entire block on the page */
     display: block;
-    background-image: none !important; /* Forces the 'ghost' logo to disappear */
+    background-image: none !important; /* Prevents background image inheritance */
+    text-align: right;       /* Essential for right-aligning inline-block elements inside */
 }
 
 .main-logo {
-    width: 500px;            /* Adjust this to change the logo size */
-    max-width: 90%;          /* Keeps it from breaking on mobile phones */
+    width: 500px;            /* Desktop logo width */
+    max-width: 90%;          /* Mobile responsiveness: ensures logo shrinks */
     height: auto;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto;          /* Centers the logo image itself within the wrapper */
 }
 
 .insta-icon {
-    position: absolute;      /* Places the icon relative to the logo-wrapper */
-    top: -10px;              /* Moves it UP (decrease to -20 to go higher) */
-    right: -25px;             /* Moves it RIGHT (increase to -40 to go further out) */
-    z-index: 10;
+    /* Instead of absolute, use relative positioning and float to keep it within bounds */
+    position: relative;      /* No longer absolute, stays within content flow */
+    display: inline-block;  /* Required for floating/aligning */
+    float: right;           /* Pushes the icon to the right side of the wrapper */
+    top: -45px;             /* Adjust to position vertically above the logo (try -40px or -50px) */
+    margin-right: 0;         /* Ensures no extra space on the right */
+    z-index: 10;            /* Keeps it visible on top */
+    /* Remove 'right: -25px' entirely */
 }
 
 .insta-icon img {
-    width: 35px;             /* Size of the Instagram icon */
+    width: 35px;             /* Icon size */
     height: 35px;
-    background-color: white; /* Optional: adds a white backing if the icon is transparent */
-    border-radius: 8px;      /* Slightly rounds the corners */
-    transition: transform 0.2s ease; /* Smooth animation for the hover effect */
+    background-color: white; /* Optional: adds a white backing */
+    border-radius: 8px;      /* Rounded corners */
+    transition: transform 0.2s ease; /* Hover animation */
 }
 
 .insta-icon:hover img {
-    transform: scale(1.15);  /* Makes the icon pop slightly when hovered */
+    transform: scale(1.15);  /* Hover pop effect */
 }
-
 </style>
  
