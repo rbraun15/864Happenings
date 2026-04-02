@@ -208,10 +208,7 @@ input, select, textarea {
 }
 
 
-.white-link-item a:hover,
-.white-link-item a:visited {
-    color: white;
-}
+
 
  ul.service-list {
       list-style: none;
@@ -321,8 +318,22 @@ border: 2px solid white;
 }
 
 
-li {
-    margin-bottom: 10px; /* Adjust this value as needed, e.g., 5px, 0.5em, 15px */
+/* Instagram Logo Styling for HH.css */
+.instagram-link {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px; /* Adjust spacing to match your index layout */
+}
+
+.instagram-logo {
+    width: 25px;  /* Adjust size to match your index logo */
+    height: auto;
+    display:block;
+    transition: transform 0.3s ease;
+}
+
+.instagram-logo:hover {
+    transform: scale(1.1); /* Subtle grow effect on hover */
 }
 
 
