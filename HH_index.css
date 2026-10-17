@@ -47,11 +47,27 @@ body {
 .navbar a:hover, .dropdown:hover .dropbtn { background-color: white; color: black; }
 
 .dropdown-content {
-  display: none; position: absolute; background-color: #3B5F38;
-  min-width: 160px; z-index: 1;
+  display: none; 
+  position: absolute; 
+  background-color: #3B5F38;
+  min-width: 160px; 
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
-.dropdown-content a { color: white; padding: 12px 8px; text-decoration: none; display: block; }
+.dropdown-content a { 
+  float: none;
+  color: white; 
+  padding: 12px 8px; 
+  text-decoration: none; 
+  display: block; 
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: white;
+  color: black;
+}
 
 .dropdown:hover .dropdown-content { display: block; }
 
